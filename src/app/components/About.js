@@ -45,7 +45,7 @@ export default function About() {
               <p className="text-lg text-gray-600 leading-relaxed">
                 At Inner Essence Therapy, we believe that everyone deserves access to quality mental
                 health care. Our team of licensed professionals is dedicated to providing
-                compassionate, evidence-based therapy services to help you navigate life's
+                compassionate, evidence-based therapy services to help you navigate life&apos;s
                 challenges and discover your inner strength.
               </p>
             </div>
@@ -60,7 +60,7 @@ export default function About() {
               </p>
 
               <p className="text-gray-600 leading-relaxed">
-                Beyond individual sessions, we're committed to community wellness through our
+                Beyond individual sessions, we&apos;re committed to community wellness through our
                 workshops and speaking engagements, helping to reduce stigma and promote mental
                 health awareness across all aspects of life.
               </p>

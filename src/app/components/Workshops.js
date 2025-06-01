@@ -62,7 +62,7 @@ export default function Workshops() {
             Workshops & Speaking Engagements
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Join our educational workshops or invite us to speak at your organization. We're
+            Join our educational workshops or invite us to speak at your organization. We&apos;re
             passionate about promoting mental health awareness and providing practical tools for
             wellbeing.
           </p>
@@ -104,7 +104,7 @@ export default function Workshops() {
                 <p className="text-gray-600 mb-4 leading-relaxed">{workshop.description}</p>
 
                 <div className="mb-6">
-                  <h5 className="font-semibold text-gray-900 mb-2">What You'll Learn:</h5>
+                  <h5 className="font-semibold text-gray-900 mb-2">What You&apos;ll Learn:</h5>
                   <ul className="space-y-1">
                     {workshop.topics.map((topic, topicIndex) => (
                       <li key={topicIndex} className="flex items-center text-sm text-gray-700">

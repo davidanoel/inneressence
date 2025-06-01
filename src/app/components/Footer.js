@@ -114,7 +114,7 @@ export default function Footer() {
             </ul>
             <div className="mt-6 p-4 bg-red-900 bg-opacity-50 rounded-lg">
               <p className="text-red-200 text-sm">
-                If you're in crisis, please reach out immediately. You're not alone.
+                If you&apos;re in crisis, please reach out immediately. You&apos;re not alone.
               </p>
             </div>
           </div>

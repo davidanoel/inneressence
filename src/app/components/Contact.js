@@ -77,7 +77,7 @@ export default function Contact() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Ready to take the first step? Contact us today to schedule your consultation or learn
-            more about our services. We're here to support you on your wellness journey.
+            more about our services. We&apos;re here to support you on your wellness journey.
           </p>
         </div>
 
@@ -214,7 +214,7 @@ export default function Contact() {
             <div className="bg-red-50 border border-red-200 rounded-xl p-6">
               <h4 className="font-semibold text-red-800 mb-2">Crisis Support</h4>
               <p className="text-red-700 text-sm mb-3">
-                If you're experiencing a mental health emergency, please contact:
+                If you&apos;re experiencing a mental health emergency, please contact:
               </p>
               <ul className="space-y-2 text-sm text-red-700">
                 <li>• Emergency Services: 911</li>
