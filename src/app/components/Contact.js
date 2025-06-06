@@ -70,12 +70,17 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-gray-50">
+    <section
+      id="contact"
+      className="section-padding bg-gray-50 dark:bg-gray-800 calming:bg-sage-100 transition-colors duration-300"
+    >
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 calming:text-sage-900 mb-4">
+            Get In Touch
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400 calming:text-sage-700 max-w-3xl mx-auto">
             Ready to take the first step? Contact us today to schedule your consultation or learn
             more about our services. We&apos;re here to support you on your wellness journey.
           </p>
@@ -83,13 +88,18 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+          <div className="bg-white dark:bg-gray-800 calming:bg-sage-50 rounded-2xl p-8 shadow-lg dark:shadow-gray-900/20 calming:shadow-sage-300/20 border border-transparent calming:border-sage-200/30">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 calming:text-sage-900 mb-6">
+              Send us a Message
+            </h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 calming:text-sage-700 mb-2"
+                  >
                     Full Name *
                   </label>
                   <input
@@ -99,13 +109,16 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 calming:border-sage-300 rounded-lg focus:ring-2 focus:ring-blue-500 calming:focus:ring-calm-500 focus:border-blue-500 calming:focus:border-calm-500 transition-colors bg-white dark:bg-gray-700 calming:bg-sage-25 text-gray-900 dark:text-gray-100 calming:text-sage-900"
                     placeholder="Your full name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 calming:text-sage-700 mb-2"
+                  >
                     Phone Number
                   </label>
                   <input
@@ -114,14 +127,17 @@ export default function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 calming:border-sage-300 rounded-lg focus:ring-2 focus:ring-blue-500 calming:focus:ring-calm-500 focus:border-blue-500 calming:focus:border-calm-500 transition-colors bg-white dark:bg-gray-700 calming:bg-sage-25 text-gray-900 dark:text-gray-100 calming:text-sage-900"
                     placeholder="(555) 123-4567"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 calming:text-sage-700 mb-2"
+                >
                   Email Address *
                 </label>
                 <input
@@ -131,13 +147,16 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 calming:border-sage-300 rounded-lg focus:ring-2 focus:ring-blue-500 calming:focus:ring-calm-500 focus:border-blue-500 calming:focus:border-calm-500 transition-colors bg-white dark:bg-gray-700 calming:bg-sage-25 text-gray-900 dark:text-gray-100 calming:text-sage-900"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="service"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 calming:text-sage-700 mb-2"
+                >
                   Service of Interest
                 </label>
                 <select
@@ -145,7 +164,7 @@ export default function Contact() {
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 calming:border-sage-300 rounded-lg focus:ring-2 focus:ring-blue-500 calming:focus:ring-calm-500 focus:border-blue-500 calming:focus:border-calm-500 transition-colors bg-white dark:bg-gray-700 calming:bg-sage-25 text-gray-900 dark:text-gray-100 calming:text-sage-900"
                 >
                   <option value="">Select a service</option>
                   {services.map((service, index) => (
@@ -157,7 +176,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 calming:text-sage-700 mb-2"
+                >
                   Message *
                 </label>
                 <textarea
@@ -167,7 +189,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 calming:border-sage-300 rounded-lg focus:ring-2 focus:ring-blue-500 calming:focus:ring-calm-500 focus:border-blue-500 calming:focus:border-calm-500 transition-colors bg-white dark:bg-gray-700 calming:bg-sage-25 text-gray-900 dark:text-gray-100 calming:text-sage-900"
                   placeholder="Tell us how we can help you..."
                 ></textarea>
               </div>
@@ -178,7 +200,7 @@ export default function Contact() {
               </button>
             </form>
 
-            <p className="text-sm text-gray-600 mt-4">
+            <p className="text-sm text-gray-600 dark:text-gray-400 calming:text-sage-600 mt-4">
               * Required fields. Your information is confidential and secure.
             </p>
           </div>
@@ -186,7 +208,9 @@ export default function Contact() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 calming:text-sage-900 mb-6">
+                Contact Information
+              </h3>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
                 {contactInfo.map((info, index) => {
@@ -194,15 +218,21 @@ export default function Contact() {
                   return (
                     <div
                       key={index}
-                      className="flex items-start space-x-4 p-4 bg-white rounded-xl shadow-sm"
+                      className="flex items-start space-x-4 p-4 bg-white dark:bg-gray-800 calming:bg-sage-50 rounded-xl shadow-sm dark:shadow-gray-900/20 calming:shadow-sage-300/20 border border-transparent calming:border-sage-200/30"
                     >
-                      <div className="bg-blue-100 p-3 rounded-lg flex-shrink-0">
-                        <IconComponent className="h-6 w-6 text-blue-600" />
+                      <div className="bg-blue-100 dark:bg-blue-900/30 calming:bg-calm-100 p-3 rounded-lg flex-shrink-0">
+                        <IconComponent className="h-6 w-6 text-blue-600 dark:text-blue-400 calming:text-calm-600" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">{info.title}</h4>
-                        <p className="text-gray-900 mb-1">{info.details}</p>
-                        <p className="text-sm text-gray-600">{info.description}</p>
+                        <h4 className="font-semibold text-gray-900 dark:text-gray-100 calming:text-sage-900 mb-1">
+                          {info.title}
+                        </h4>
+                        <p className="text-gray-900 dark:text-gray-100 calming:text-sage-900 font-medium mb-1">
+                          {info.details}
+                        </p>
+                        <p className="text-sm text-gray-600 dark:text-gray-400 calming:text-sage-600">
+                          {info.description}
+                        </p>
                       </div>
                     </div>
                   );
@@ -210,31 +240,66 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Emergency Contact */}
-            <div className="bg-red-50 border border-red-200 rounded-xl p-6">
-              <h4 className="font-semibold text-red-800 mb-2">Crisis Support</h4>
-              <p className="text-red-700 text-sm mb-3">
-                If you&apos;re experiencing a mental health emergency, please contact:
-              </p>
-              <ul className="space-y-2 text-sm text-red-700">
-                <li>• Emergency Services: 911</li>
-                <li>• Crisis Hotline: 988 (Suicide & Crisis Lifeline)</li>
-                <li>• Crisis Text Line: Text HOME to 741741</li>
+            {/* Office Hours & Additional Info */}
+            <div className="bg-blue-50 dark:bg-gray-800 calming:bg-calm-50 rounded-xl p-6 border border-transparent calming:border-calm-200/30">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 calming:text-sage-900 mb-4">
+                Important Information
+              </h4>
+              <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400 calming:text-sage-700">
+                <li className="flex items-start space-x-2">
+                  <div className="w-2 h-2 bg-blue-600 dark:bg-blue-400 calming:bg-calm-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>
+                    <strong>Emergency Support:</strong> If you&apos;re experiencing a mental health
+                    emergency, please call 911 or go to your nearest emergency room.
+                  </span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <div className="w-2 h-2 bg-blue-600 dark:bg-blue-400 calming:bg-calm-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>
+                    <strong>Response Time:</strong> We typically respond to all inquiries within 24
+                    hours during business days.
+                  </span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <div className="w-2 h-2 bg-blue-600 dark:bg-blue-400 calming:bg-calm-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>
+                    <strong>Confidentiality:</strong> All communications are treated with the
+                    highest level of confidentiality and privacy.
+                  </span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <div className="w-2 h-2 bg-blue-600 dark:bg-blue-400 calming:bg-calm-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>
+                    <strong>Insurance:</strong> We accept most major insurance plans. Contact us to
+                    verify your coverage.
+                  </span>
+                </li>
               </ul>
             </div>
 
-            {/* Insurance Info */}
-            <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-              <h4 className="font-semibold text-blue-800 mb-2">Insurance & Payment</h4>
-              <p className="text-blue-700 text-sm mb-3">
-                We accept most major insurance plans and offer flexible payment options:
-              </p>
-              <ul className="space-y-1 text-sm text-blue-700">
-                <li>• Most major insurance plans accepted</li>
-                <li>• Sliding scale fees available</li>
-                <li>• HSA/FSA payments accepted</li>
-                <li>• Payment plans available</li>
-              </ul>
+            {/* Crisis Resources */}
+            <div className="bg-red-50 dark:bg-red-900/20 calming:bg-earth-100 rounded-xl p-6 border border-red-200 dark:border-red-800/30 calming:border-earth-300">
+              <h4 className="font-semibold text-red-900 dark:text-red-200 calming:text-earth-800 mb-4">
+                Crisis Resources
+              </h4>
+              <div className="space-y-2 text-sm text-red-800 dark:text-red-300 calming:text-earth-700">
+                <p>
+                  <strong>National Suicide Prevention Lifeline:</strong>{" "}
+                  <a href="tel:988" className="underline hover:no-underline">
+                    988
+                  </a>
+                </p>
+                <p>
+                  <strong>Crisis Text Line:</strong>{" "}
+                  <span className="font-mono">Text HOME to 741741</span>
+                </p>
+                <p>
+                  <strong>SAMHSA National Helpline:</strong>{" "}
+                  <a href="tel:1-800-662-4357" className="underline hover:no-underline">
+                    1-800-662-HELP (4357)
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>

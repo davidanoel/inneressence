@@ -54,14 +54,17 @@ export default function Workshops() {
   ];
 
   return (
-    <section id="workshops" className="section-padding bg-white">
+    <section
+      id="workshops"
+      className="section-padding bg-white dark:bg-gray-900 calming:bg-sage-50 transition-colors duration-300"
+    >
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 calming:text-sage-900 mb-4">
             Workshops & Speaking Engagements
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-400 calming:text-sage-700 max-w-3xl mx-auto">
             Join our educational workshops or invite us to speak at your organization. We&apos;re
             passionate about promoting mental health awareness and providing practical tools for
             wellbeing.
@@ -70,7 +73,7 @@ export default function Workshops() {
 
         {/* Workshops Section */}
         <div className="mb-20">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 calming:text-sage-900 mb-8 text-center">
             Upcoming Workshops
           </h3>
 
@@ -78,37 +81,46 @@ export default function Workshops() {
             {workshops.map((workshop, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
+                className="bg-gray-50 dark:bg-gray-800 calming:bg-sage-100 rounded-xl p-6 hover:shadow-lg dark:hover:shadow-gray-900/20 calming:hover:shadow-sage-300/20 transition-all duration-300 border border-transparent calming:border-sage-200/30"
               >
-                <h4 className="text-xl font-semibold text-gray-900 mb-4">{workshop.title}</h4>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-gray-100 calming:text-sage-900 mb-4">
+                  {workshop.title}
+                </h4>
 
                 <div className="space-y-3 mb-6">
-                  <div className="flex items-center text-gray-600">
-                    <Calendar className="h-4 w-4 mr-3 text-blue-600" />
+                  <div className="flex items-center text-gray-600 dark:text-gray-400 calming:text-sage-600">
+                    <Calendar className="h-4 w-4 mr-3 text-blue-600 dark:text-blue-400 calming:text-calm-600" />
                     <span className="text-sm">{workshop.date}</span>
                   </div>
-                  <div className="flex items-center text-gray-600">
-                    <Clock className="h-4 w-4 mr-3 text-blue-600" />
+                  <div className="flex items-center text-gray-600 dark:text-gray-400 calming:text-sage-600">
+                    <Clock className="h-4 w-4 mr-3 text-blue-600 dark:text-blue-400 calming:text-calm-600" />
                     <span className="text-sm">{workshop.time}</span>
                   </div>
-                  <div className="flex items-center text-gray-600">
-                    <Users className="h-4 w-4 mr-3 text-blue-600" />
+                  <div className="flex items-center text-gray-600 dark:text-gray-400 calming:text-sage-600">
+                    <Users className="h-4 w-4 mr-3 text-blue-600 dark:text-blue-400 calming:text-calm-600" />
                     <span className="text-sm">{workshop.participants}</span>
                   </div>
-                  <div className="flex items-center text-gray-600">
-                    <MapPin className="h-4 w-4 mr-3 text-blue-600" />
+                  <div className="flex items-center text-gray-600 dark:text-gray-400 calming:text-sage-600">
+                    <MapPin className="h-4 w-4 mr-3 text-blue-600 dark:text-blue-400 calming:text-calm-600" />
                     <span className="text-sm">{workshop.location}</span>
                   </div>
                 </div>
 
-                <p className="text-gray-600 mb-4 leading-relaxed">{workshop.description}</p>
+                <p className="text-gray-600 dark:text-gray-400 calming:text-sage-700 mb-4 leading-relaxed">
+                  {workshop.description}
+                </p>
 
                 <div className="mb-6">
-                  <h5 className="font-semibold text-gray-900 mb-2">What You&apos;ll Learn:</h5>
+                  <h5 className="font-semibold text-gray-900 dark:text-gray-100 calming:text-sage-900 mb-2">
+                    What You&apos;ll Learn:
+                  </h5>
                   <ul className="space-y-1">
                     {workshop.topics.map((topic, topicIndex) => (
-                      <li key={topicIndex} className="flex items-center text-sm text-gray-700">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></div>
+                      <li
+                        key={topicIndex}
+                        className="flex items-center text-sm text-gray-700 dark:text-gray-300 calming:text-sage-700"
+                      >
+                        <div className="w-2 h-2 bg-blue-600 dark:bg-blue-400 calming:bg-calm-600 rounded-full mr-3 flex-shrink-0"></div>
                         {topic}
                       </li>
                     ))}
@@ -122,13 +134,13 @@ export default function Workshops() {
         </div>
 
         {/* Speaking Engagements Section */}
-        <div className="bg-blue-50 rounded-2xl p-8 md:p-12">
+        <div className="bg-blue-50 dark:bg-gray-800 calming:bg-calm-50 rounded-2xl p-8 md:p-12 border border-transparent calming:border-calm-200/30">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 calming:text-sage-900 mb-4">
                 Professional Speaking Engagements
               </h3>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-600 dark:text-gray-400 calming:text-sage-700 mb-6 leading-relaxed">
                 Invite our licensed professionals to speak at your organization, conference, or
                 community event. We provide engaging, educational presentations on various mental
                 health topics.
@@ -136,12 +148,16 @@ export default function Workshops() {
 
               <div className="space-y-4 mb-8">
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Popular Speaking Topics:</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-gray-100 calming:text-sage-900 mb-2">
+                    Popular Speaking Topics:
+                  </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {speakingTopics.map((topic, index) => (
                       <div key={index} className="flex items-center">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></div>
-                        <span className="text-sm text-gray-700">{topic}</span>
+                        <div className="w-2 h-2 bg-blue-600 dark:bg-blue-400 calming:bg-calm-600 rounded-full mr-3 flex-shrink-0"></div>
+                        <span className="text-sm text-gray-700 dark:text-gray-300 calming:text-sage-700">
+                          {topic}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -158,13 +174,13 @@ export default function Workshops() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-200 to-indigo-300 rounded-xl h-64 lg:h-80 flex items-center justify-center">
-              <div className="text-center text-blue-800 space-y-4">
-                <div className="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-lg">
-                  <Users className="h-8 w-8 text-blue-600" />
+            <div className="bg-gradient-to-br from-blue-200 to-indigo-300 dark:from-blue-900/40 dark:to-indigo-900/40 calming:from-calm-200 calming:to-sage-300 rounded-xl h-64 lg:h-80 flex items-center justify-center">
+              <div className="text-center text-blue-800 dark:text-blue-200 calming:text-sage-800 space-y-4">
+                <div className="w-16 h-16 mx-auto bg-white dark:bg-gray-800 calming:bg-sage-50 rounded-full flex items-center justify-center shadow-lg">
+                  <Users className="h-8 w-8 text-blue-600 dark:text-blue-400 calming:text-calm-600" />
                 </div>
                 <h4 className="text-xl font-semibold">Community Impact</h4>
-                <p className="text-blue-700 max-w-xs">
+                <p className="text-blue-700 dark:text-blue-300 calming:text-sage-700 max-w-xs">
                   Spreading mental health awareness and building stronger communities
                 </p>
               </div>

@@ -77,12 +77,17 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="section-padding bg-white">
+    <section
+      id="services"
+      className="section-padding bg-white dark:bg-gray-900 calming:bg-sage-100 transition-colors duration-300"
+    >
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 calming:text-sage-900 mb-4">
+            Our Services
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400 calming:text-sage-700 max-w-3xl mx-auto">
             Comprehensive mental health services designed to support you on your wellness journey.
             We offer evidence-based treatments in a compassionate, professional environment.
           </p>
@@ -95,21 +100,28 @@ export default function Services() {
             return (
               <div
                 key={index}
-                className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
+                className="bg-gray-50 dark:bg-gray-800 calming:bg-sage-100 rounded-xl p-6 hover:shadow-lg dark:hover:shadow-gray-900/20 calming:hover:shadow-sage-300/20 transition-all duration-300 border border-transparent calming:border-sage-200/50"
               >
                 <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 p-3 rounded-lg mr-4">
-                    <IconComponent className="h-6 w-6 text-blue-600" />
+                  <div className="bg-blue-100 dark:bg-blue-900/30 calming:bg-calm-100 p-3 rounded-lg mr-4">
+                    <IconComponent className="h-6 w-6 text-blue-600 dark:text-blue-400 calming:text-calm-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 calming:text-sage-900">
+                    {service.title}
+                  </h3>
                 </div>
 
-                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                <p className="text-gray-600 dark:text-gray-400 calming:text-sage-700 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
 
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></div>
+                    <li
+                      key={featureIndex}
+                      className="flex items-center text-sm text-gray-700 dark:text-gray-300 calming:text-sage-700"
+                    >
+                      <div className="w-2 h-2 bg-blue-600 dark:bg-blue-400 calming:bg-calm-600 rounded-full mr-3 flex-shrink-0"></div>
                       {feature}
                     </li>
                   ))}
@@ -121,11 +133,11 @@ export default function Services() {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="bg-blue-50 rounded-2xl p-8 md:p-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+          <div className="bg-blue-50 dark:bg-gray-800 calming:bg-calm-50 rounded-2xl p-8 md:p-12 border border-transparent calming:border-calm-200/30">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 calming:text-sage-900 mb-4">
               Ready to Begin Your Healing Journey?
             </h3>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-400 calming:text-sage-700 mb-8 max-w-2xl mx-auto">
               Take the first step towards better mental health. Contact us today to schedule your
               initial consultation and learn how we can support you.
             </p>

@@ -32,17 +32,20 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="section-padding bg-gray-50">
+    <section
+      id="about"
+      className="section-padding bg-gray-50 dark:bg-gray-800 calming:bg-sage-100 transition-colors duration-300"
+    >
       <div className="container-custom">
         {/* Main About Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Content */}
           <div className="space-y-6">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 calming:text-sage-900 mb-4">
                 About Inner Essence Therapy
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 dark:text-gray-400 calming:text-sage-700 leading-relaxed">
                 At Inner Essence Therapy, we believe that everyone deserves access to quality mental
                 health care. Our team of licensed professionals is dedicated to providing
                 compassionate, evidence-based therapy services to help you navigate life&apos;s
@@ -51,7 +54,7 @@ export default function About() {
             </div>
 
             <div className="space-y-4">
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 calming:text-sage-700 leading-relaxed">
                 Founded with the mission to make mental health support accessible and effective, we
                 offer a range of therapeutic services including individual, group, and family
                 therapy. Our approach combines traditional therapeutic methods with innovative
@@ -59,7 +62,7 @@ export default function About() {
                 journey.
               </p>
 
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 calming:text-sage-700 leading-relaxed">
                 Beyond individual sessions, we&apos;re committed to community wellness through our
                 workshops and speaking engagements, helping to reduce stigma and promote mental
                 health awareness across all aspects of life.
@@ -78,13 +81,15 @@ export default function About() {
 
           {/* Image Placeholder */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-green-100 to-blue-100 rounded-2xl h-96 lg:h-[450px] flex items-center justify-center">
+            <div className="bg-gradient-to-br from-green-100 to-blue-100 dark:from-green-900/30 dark:to-blue-900/30 calming:from-calm-100 calming:to-sage-100 rounded-2xl h-96 lg:h-[450px] flex items-center justify-center">
               <div className="text-center space-y-4">
-                <div className="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-lg">
-                  <Users2 className="h-10 w-10 text-blue-600" />
+                <div className="w-20 h-20 mx-auto bg-white dark:bg-gray-800 calming:bg-sage-50 rounded-full flex items-center justify-center shadow-lg">
+                  <Users2 className="h-10 w-10 text-blue-600 dark:text-blue-400 calming:text-calm-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800">Professional Excellence</h3>
-                <p className="text-gray-700 max-w-xs">
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 calming:text-sage-800">
+                  Professional Excellence
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300 calming:text-sage-700 max-w-xs">
                   Licensed therapists committed to your wellbeing and professional growth
                 </p>
               </div>
@@ -97,14 +102,19 @@ export default function About() {
           {stats.map((stat, index) => {
             const IconComponent = stat.icon;
             return (
-              <div key={index} className="text-center bg-white p-6 rounded-xl shadow-sm">
-                <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="h-6 w-6 text-blue-600" />
+              <div
+                key={index}
+                className="text-center bg-white dark:bg-gray-800 calming:bg-sage-50 p-6 rounded-xl shadow-sm dark:shadow-gray-900/20 calming:shadow-sage-300/20 border border-transparent calming:border-sage-200/30"
+              >
+                <div className="bg-blue-100 dark:bg-blue-900/30 calming:bg-calm-100 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <IconComponent className="h-6 w-6 text-blue-600 dark:text-blue-400 calming:text-calm-600" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">
+                <div className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 calming:text-sage-900 mb-1">
                   {stat.number}
                 </div>
-                <div className="text-sm text-gray-600">{stat.label}</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400 calming:text-sage-600">
+                  {stat.label}
+                </div>
               </div>
             );
           })}
@@ -113,8 +123,10 @@ export default function About() {
         {/* Values Section */}
         <div>
           <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Our Core Values</h3>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 calming:text-sage-900 mb-4">
+              Our Core Values
+            </h3>
+            <p className="text-lg text-gray-600 dark:text-gray-400 calming:text-sage-700 max-w-2xl mx-auto">
               These principles guide everything we do and ensure you receive the highest quality
               care.
             </p>
@@ -124,10 +136,14 @@ export default function About() {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white dark:bg-gray-800 calming:bg-sage-50 p-6 rounded-xl shadow-sm hover:shadow-md dark:shadow-gray-900/20 calming:shadow-sage-300/20 dark:hover:shadow-gray-900/30 calming:hover:shadow-sage-300/30 transition-shadow border border-transparent calming:border-sage-200/30"
               >
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h4>
-                <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-gray-100 calming:text-sage-900 mb-3">
+                  {value.title}
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400 calming:text-sage-700 leading-relaxed">
+                  {value.description}
+                </p>
               </div>
             ))}
           </div>

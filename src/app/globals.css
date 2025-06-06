@@ -15,11 +15,11 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply bg-blue-600 hover:bg-blue-700 calming:bg-calm-600 calming:hover:bg-calm-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 calming:focus:ring-calm-500 focus:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply bg-gray-100 hover:bg-gray-200 text-gray-900 font-medium py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+    @apply bg-gray-100 hover:bg-gray-200 calming:bg-sage-200 calming:hover:bg-sage-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 calming:text-sage-900 dark:text-gray-100 font-medium py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 calming:focus:ring-sage-500 focus:ring-offset-2;
   }
 
   .section-padding {
@@ -28,5 +28,17 @@
 
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Calming theme specific styles */
+  .calming .bg-gradient-calm {
+    background: linear-gradient(135deg, theme("colors.calm.50") 0%, theme("colors.sage.100") 100%);
+  }
+
+  .calming .text-gradient-calm {
+    background: linear-gradient(135deg, theme("colors.calm.600") 0%, theme("colors.sage.600") 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
