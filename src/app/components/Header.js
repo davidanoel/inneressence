@@ -36,18 +36,6 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-sm text-gray-600">
-              <Phone className="h-4 w-4" />
-              <span>(555) 123-4567</span>
-            </div>
-            <div className="flex items-center space-x-2 text-sm text-gray-600">
-              <Mail className="h-4 w-4" />
-              <span>info@inneressencetherapy.com</span>
-            </div>
-          </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
