@@ -1,7 +1,19 @@
+"use client";
+
 import { ArrowRight, Shield, Phone } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById("services");
+    if (servicesSection) {
+      servicesSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <section
       id="home"
@@ -11,7 +23,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         {/* Hero Image - Replace with your downloaded image */}
         <Image
-          src="/images/hero-image.jpg"
+          src="/images/hero-image1.jpg"
           alt="Peaceful therapy environment - serene nature scene promoting mental wellness"
           fill
           className="object-cover"
@@ -31,14 +43,6 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 container-custom text-center">
         <div className="max-w-4xl mx-auto space-y-8">
-          {/* Minimal Trust Badge */}
-          <div className="inline-flex items-center space-x-2 bg-white/90 dark:bg-gray-800/90 calming:bg-sage-50/90 backdrop-blur-md px-6 py-3 rounded-full shadow-lg border border-white/50 dark:border-gray-600/50 calming:border-sage-200/50">
-            <Shield className="h-4 w-4 text-emerald-600 calming:text-calm-600" />
-            <span className="text-gray-800 dark:text-gray-200 calming:text-sage-800 text-sm font-medium">
-              Licensed Mental Health Professionals
-            </span>
-          </div>
-
           {/* Main Headline - Minimal & Elegant */}
           <div className="space-y-6">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white leading-tight tracking-wide drop-shadow-lg">
@@ -64,29 +68,19 @@ export default function Hero() {
               <ArrowRight className="ml-3 h-5 w-5" />
             </a>
           </div>
-
-          {/* Minimal Contact Info */}
-          <div className="pt-12">
-            <div className="inline-flex items-center space-x-8 bg-white/10 dark:bg-gray-800/20 calming:bg-sage-100/20 backdrop-blur-md px-8 py-4 rounded-full border border-white/20 dark:border-gray-600/20 calming:border-sage-300/30">
-              <div className="flex items-center space-x-2 text-white/95">
-                <Phone className="h-4 w-4" />
-                <span className="text-sm font-light">(555) 123-4567</span>
-              </div>
-              <div className="w-1 h-1 bg-white/60 rounded-full"></div>
-              <span className="text-white/95 text-sm font-light">
-                Same-day appointments available
-              </span>
-            </div>
-          </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="w-6 h-10 border-2 border-white/60 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/80 rounded-full mt-2 animate-bounce"></div>
+      {/* Scroll Indicator - Now Clickable */}
+      <button
+        onClick={scrollToServices}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 group focus:outline-none focus:ring-4 focus:ring-white/50 rounded-full p-2 transition-all duration-300 hover:scale-110"
+        aria-label="Scroll to services section"
+      >
+        <div className="w-6 h-10 border-2 border-white/60 group-hover:border-white/80 rounded-full flex justify-center transition-colors duration-300">
+          <div className="w-1 h-3 bg-white/80 group-hover:bg-white rounded-full mt-2 animate-bounce"></div>
         </div>
-      </div>
+      </button>
     </section>
   );
 }
